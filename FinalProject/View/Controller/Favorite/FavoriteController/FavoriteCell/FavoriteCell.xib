@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="FavoriteCell" customModule="FinalProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="340" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeC-dF-c1S">
+                        <rect key="frame" x="105" y="38.5" width="225" height="18"/>
+                        <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LxX-K0-wEB">
+                        <rect key="frame" x="10" y="10" width="80" height="80"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="dxl-Wg-jIZ"/>
+                            <constraint firstAttribute="width" secondItem="LxX-K0-wEB" secondAttribute="height" multiplier="1:1" id="zQT-Gh-p96"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gja-sC-wus">
+                        <rect key="frame" x="105" y="14.5" width="196" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aip-T1-i0F">
+                        <rect key="frame" x="306" y="10" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="t43-Qh-RZm"/>
+                        </constraints>
+                        <state key="normal" image="favorited"/>
+                        <connections>
+                            <action selector="favoriteButtonTouchUpInside:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Kzi-Ky-Yxv"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSa-9M-Ool">
+                        <rect key="frame" x="105" y="59.5" width="49" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gja-sC-wus" firstAttribute="centerY" secondItem="LxX-K0-wEB" secondAttribute="centerY" multiplier="0.5" id="26n-JN-1HU"/>
+                    <constraint firstItem="gja-sC-wus" firstAttribute="leading" secondItem="LxX-K0-wEB" secondAttribute="trailing" constant="15" id="AQu-ln-zm2"/>
+                    <constraint firstItem="jSa-9M-Ool" firstAttribute="leading" secondItem="HeC-dF-c1S" secondAttribute="leading" id="AlT-eD-srB"/>
+                    <constraint firstItem="LxX-K0-wEB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Bfr-cP-8ZR"/>
+                    <constraint firstAttribute="trailing" secondItem="HeC-dF-c1S" secondAttribute="trailing" constant="10" id="Sar-xf-2At"/>
+                    <constraint firstItem="LxX-K0-wEB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Wry-h4-hwf"/>
+                    <constraint firstItem="HeC-dF-c1S" firstAttribute="top" secondItem="gja-sC-wus" secondAttribute="bottom" constant="3" id="dga-PR-opp"/>
+                    <constraint firstItem="aip-T1-i0F" firstAttribute="leading" secondItem="gja-sC-wus" secondAttribute="trailing" constant="5" id="iUk-na-Vkq"/>
+                    <constraint firstAttribute="bottom" secondItem="LxX-K0-wEB" secondAttribute="bottom" constant="10" id="kIY-x4-vVP"/>
+                    <constraint firstItem="jSa-9M-Ool" firstAttribute="top" secondItem="HeC-dF-c1S" secondAttribute="bottom" constant="3" id="ojT-8T-qDu"/>
+                    <constraint firstItem="aip-T1-i0F" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="rxG-xU-eyU"/>
+                    <constraint firstAttribute="trailing" secondItem="aip-T1-i0F" secondAttribute="trailing" constant="10" id="s13-hk-5ez"/>
+                    <constraint firstItem="HeC-dF-c1S" firstAttribute="leading" secondItem="gja-sC-wus" secondAttribute="leading" id="wDs-ED-vYq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addressLabel" destination="HeC-dF-c1S" id="meg-G3-rSG"/>
+                <outlet property="favoriteButton" destination="aip-T1-i0F" id="Bb8-go-QoS"/>
+                <outlet property="nameLabel" destination="gja-sC-wus" id="M17-cO-Yz6"/>
+                <outlet property="photoImageView" destination="LxX-K0-wEB" id="ozR-Ru-m5p"/>
+                <outlet property="reviewLabel" destination="jSa-9M-Ool" id="7Bg-Eb-vwj"/>
+            </connections>
+            <point key="canvasLocation" x="152.17391304347828" y="102.45535714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="favorited" width="24" height="24"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
